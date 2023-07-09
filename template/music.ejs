@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Music</title>
+</head>
+    <body>
+        <div class="container-P">
+        <h2>Músicas</h2>
+        <div class="container">
+        <% for(let i of docs) {%>
+            <div>
+              <a href="<%=i.link%>"><img src="<%=i.url%>"></a>
+                
+                <h3 class="position font">Musica: <%=i.music%></h3>
+                <div class="position font">Cantor: <%=i.name%></div>
+            </div>
+            <% }%>
+        </div>
+        </div>
+    </body>
+
+</html>

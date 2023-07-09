@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-content: space-between;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.font{
+    font-family: 'Roboto', sans-serif;
+}
+
+img{
+    margin-top: 20px;
+    margin-right: 10px;
+    width:300px;
+    border-radius: 15px;
+}
+
+.position{
+    margin-left: 10px;
+}
