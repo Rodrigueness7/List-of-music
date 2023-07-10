@@ -2,7 +2,15 @@ body{
     background: linear-gradient(to right, rgb(41, 201, 219), #58a3e6)
 }
 
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
+input{
+    padding: 5px;
+}
 .container{
     display: flex;
     flex-direction: row;
