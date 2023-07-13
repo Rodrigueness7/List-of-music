@@ -4,8 +4,9 @@ const listMusic = async (req, res) => {
   const name = req.query.name
 
   try {
-    const docs = await Music.find({ name })
-    res.render('music', { docs })
+    const doc = await Music.find({ name: new RegExp(name, 'i') }).limit(5)
+    res.render('searchMusic', { doc })
+    console.log(doc)
   } catch (error) {
     res.send(error)
   }
@@ -13,18 +14,22 @@ const listMusic = async (req, res) => {
 
 const musics = async (req, res) => {
   try {
-    const doc = await Music.find({})
-    res.render('listMusic', { doc })
+    const docs = await Music.find({})
+    res.render('allMusic', { docs })
   } catch (error) {
     res.send(error)
   }
 }
 
 const addMusic = async (req, res) => {
-  const music = new Music(req.body)
   try {
-    await music.save()
-    res.send('Música adicionada com sucesso')
+    const music = new Music(req.body)
+    if (music.music !== '' && music.name !== '' && music.url !== '') {
+      await music.save()
+      res.send('Música adicionada com sucesso')
+    } else {
+      res.render('addMusic')
+    }
   } catch (error) {
     res.send(error)
   }

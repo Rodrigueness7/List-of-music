@@ -9,28 +9,22 @@
 </head>
 <body>
    <div class="form">
-    <form class="form" action="/:name" method="GET">
+    <form class="form" action="/searchMusic" method="GET">
        <input name="name" placeholder="Name">
        <button>Pesquisar</button>
-  </div>      
+   </div>      
        <div class="container-P">
            <h2>Todas as músicas</h2>
         <div class="container">
-            <% for(let i of doc) {%>
+            <% for(let i of docs) {%>
                 <div>
                     <a href="<%=i.link%>"><img src="<%=i.url%>"></a>
                     <h3 class="font">Musica: <%=i.music%></h3>
                     <div class="font">Artista: <%=i.name%></div>
-               </div>
-                
+               </div>   
             <% }%>
-
-
         </div>
-
-
        </div>
-
     </form>
 </body>
 </html>
