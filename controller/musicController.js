@@ -1,18 +1,18 @@
 const Music = require('../model/music')
 
-const listMusic = async (req, res) => {
+const searchMusic = async (req, res) => {
   const name = req.query.name
 
   try {
-    const doc = await Music.find({ name: new RegExp(name, 'i') }).limit(5)
-    res.render('searchMusic', { doc })
-    console.log(doc)
+    const docs = await Music.find({ name: new RegExp(name, 'i') }).limit(5)
+    res.render('searchMusic', { docs })
+   
   } catch (error) {
     res.send(error)
   }
 }
 
-const musics = async (req, res) => {
+const allMusic = async (req, res) => {
   try {
     const docs = await Music.find({})
     res.render('allMusic', { docs })
@@ -35,4 +35,4 @@ const addMusic = async (req, res) => {
   }
 }
 
-module.exports = { listMusic, addMusic, musics }
+module.exports = { searchMusic, addMusic, allMusic }
