@@ -5,8 +5,11 @@ const searchMusic = async (req, res) => {
 
   try {
     const docs = await Music.find({ name: new RegExp(name, 'i') }).limit(5)
-    res.render('searchMusic', { docs })
-   
+    if (docs.length !== 0) {
+      return res.render('searchMusic', { docs })
+    }
+
+    res.render('messages/error')
   } catch (error) {
     res.send(error)
   }
@@ -26,7 +29,7 @@ const addMusic = async (req, res) => {
     const music = new Music(req.body)
     if (music.music !== '' && music.name !== '' && music.url !== '') {
       await music.save()
-      res.send('Música adicionada com sucesso')
+      res.render('addSucess')
     } else {
       res.render('addMusic')
     }
