@@ -8,21 +8,21 @@
     <title>List</title>
 </head>
 <body>
-   <div>
+   <div class="form">
     <form action="/searchMusic" method="GET">
-       <input name="name" placeholder="Name" required>
-       <button>Pesquisar</button>
+       <input class="input" name="name" placeholder="Name" required>
+       <button><img class='image' src="/css/image/lupa.png"></button>
     </form>
    </div> 
-       <div class="font-T">
-           <h2>Todas as músicas</h2>
+       <div>
+           <h2 class="title">Todas as músicas</h2>
         <div class="pageHome">
             <% for(let i of docs) {%>
-                <div>
-                    <a href="<%=i.link%>"><img class="card" src="<%=i.url%>"></a> 
+                <div class="card-Principal">
+                    <img class="card" src="<%=i.url%>">
                     <h3 class="font-T">Musica: <%=i.music%></h3>
                     <div class="font-P">Artista: <%=i.name%></div>
-                    
+                    <a href="<%=i.link%>"><img class="botao-play" src="/css/image/botao-play.png"></a>
                </div>   
             <% }%>
         </div>
