@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
     <title>List</title>
 </head>
 <body>
-   <div class="form">
-    <form class="form" action="/searchMusic" method="GET">
+   <div>
+    <form action="/searchMusic" method="GET">
        <input name="name" placeholder="Name" required>
        <button>Pesquisar</button>
     </form>
    </div> 
-       <div class="container-P">
+       <div class="font-T">
            <h2>Todas as músicas</h2>
-        <div class="container">
-
+        <div class="pageHome">
             <% for(let i of docs) {%>
                 <div>
-                    <a href="<%=i.link%>"><img src="<%=i.url%>"></a>
-                    <h3 class="font">Musica: <%=i.music%></h3>
-                    <div class="font">Artista: <%=i.name%></div>
+                    <a href="<%=i.link%>"><img class="card" src="<%=i.url%>"></a> 
+                    <h3 class="font-T">Musica: <%=i.music%></h3>
+                    <div class="font-P">Artista: <%=i.name%></div>
+                    
                </div>   
             <% }%>
         </div>

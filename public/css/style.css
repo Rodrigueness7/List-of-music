@@ -1,54 +1,37 @@
-body {
-    background: linear-gradient(to right, rgb(41, 201, 219), #58a3e6)
+body{
+    background-color: rgb(22, 21, 21);
 }
-
-.form {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-
-.container {
+.pageHome{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-between;
-}
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
 
-h2 {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+
 }
-.font {
-    font-family: 'Roboto', sans-serif;
+.card{
+    width: 300px;
+    border-radius: 10px;
+    
+
+    
+}
+.card:hover{
+    width: 301px;
     
 }
 
-img {
-    margin-top: 20px;
-    margin-right: 10px;
-    width:300px;
-    border-radius: 15px;
+.font-P{
+   position: relative;
+   bottom: 2vh;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   
 }
-
-.position {
-    margin-left: 10px;
+.font-T{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    
 }
-
-.addMusic {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 85vh;
-}
-
-
