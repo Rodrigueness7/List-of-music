@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./module/header.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Music</title>
-</head>
-    <body>
-        <div class="form">
-            <form action="/searchMusic" method="GET">
-               <input class="input" name="name" placeholder="Name" required>
-               <button><img class='image' src="/css/image/lupa.png"></button>
-            </form>
-         </div>   
-        <div class="card-Principal">
-        <h2 class="font-T">Músicas</h2>
-        <div class="pageHome">
-        <% for(let i of docs) {%>
-            <div class="card-Principal">
-                <img class="card" src="<%=i.url%>">
-                <h3 class="font-P">Musica: <%=i.music%></h3>
-                <div class="font-P">Cantor: <%=i.name%></div>
-                <a href="<%=i.link%>"><img class="botao-play" src="/css/image/botao-play.png"></a>
-            </div>
-            <% }%>
-        </div>
-        </div>
-    </body>
-
-</html>
+<%- include('./module/body.ejs') %>

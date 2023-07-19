@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
-    <title>List</title>
-</head>
-<body>
-   <div>
-    <form action="/searchMusic" method="GET">
-       <input name="name" placeholder="Name" required>
-       <button>Pesquisar</button>
-   </div> 
+<%- include('../module/header.ejs') %>
        <div>
-           <h2>Todas as músicas</h2>
-        <div class="container">
+           <h2 class="title">Todas as músicas</h2>
+        <div class="font-P">
             Música não encontrada
         </div>
        </div>

@@ -1,0 +1,17 @@
+<body>
+    <div>
+        <h2 class="title">Todas as músicas</h2>
+        <div class="pageHome">
+            <% for(let i of docs) {%>
+                <div class="card-Principal">
+                    <img class="card" src="<%=i.url%>">
+                    <h3 class="font-T">Musica: <%=i.music%>
+                    </h3>
+                    <div class="font-P">Artista: <%=i.name%>
+                    </div>
+                    <a href="<%=i.link%>"><img class="botao-play" src="/css/image/botao-play.png"></a>
+                </div>
+                <%}%>
+        </div>
+    </div>
+</body>
