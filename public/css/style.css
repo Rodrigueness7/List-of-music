@@ -115,13 +115,14 @@ button{
 
 .botaoSalvar{
     position: relative;
-    left: 1vw;
-    width: 120%;
+    left: 4%;
+    width: 130%;
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(79, 79, 247);
     color: white;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .error{
@@ -141,7 +142,7 @@ button{
 .messageError{
     position: relative;
     top:35vh;
-    right: 7vw;
+    right: 8vw;
    
 }
 
@@ -167,11 +168,24 @@ button{
     .titlePageAdd{
         position: relative;
         top: 20vh;
-        left: 8vw;
+        left: 5vw;
         color:white;
         font-family: 'Roboto', sans-serif; 
         margin-left: 70px;
     }
     
+    .imageError{
+        width: 150px;
+        position: relative;
+        top:20vh;
+        left: 27vw;
+    }
+    
+    .messageError{
+        position: relative;
+        top:38vh;
+        right: 9vw;
+       
+    }
     
 }
