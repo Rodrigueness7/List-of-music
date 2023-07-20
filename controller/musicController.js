@@ -1,10 +1,10 @@
 const Music = require('../model/music')
 
 const searchMusic = async (req, res) => {
-  const name = req.query.name
+  const artist = req.query.artist
 
   try {
-    const docs = await Music.find({ name: new RegExp(name, 'i') }).limit(5)
+    const docs = await Music.find({ artist: new RegExp(artist, 'i') }).limit(5)
     if (docs.length !== 0) {
       return res.render('searchMusic', { docs })
     }
@@ -27,7 +27,7 @@ const allMusic = async (req, res) => {
 const addMusic = async (req, res) => {
   try {
     const music = new Music(req.body)
-    if (music.music !== '' && music.name !== '' && music.url !== '') {
+    if (music.name !== '' && music.artist !== '' && music.url !== '' && music.link !== '') {
       await music.save()
       res.render('messages/addSucess')
     } else {
