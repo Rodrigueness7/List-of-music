@@ -125,14 +125,14 @@ button{
     font-size: 18px;
 }
 
-.error{
+.message{
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
 }
 
-.imageError{
+.messageImage{
     width: 150px;
     position: relative;
     top:20vh;
@@ -142,9 +142,16 @@ button{
 .messageError{
     position: relative;
     top:35vh;
-    right: 8vw;
+    right: 7vw;
    
 }
+
+.messageSucesso{
+    position: relative;
+    top:35vh;
+    right: 8vw;
+}
+
 
 @media (max-width: 575.98px){
     .card{
@@ -174,18 +181,25 @@ button{
         margin-left: 70px;
     }
     
-    .imageError{
+    .messageImage{
         width: 150px;
         position: relative;
         top:20vh;
         left: 27vw;
     }
     
-    .messageError{
+    .messageTitle{
         position: relative;
         top:38vh;
         right: 9vw;
        
+    }
+
+    .messageSucesso{
+        position: relative;
+        top:35vh;
+        right: 7vw;
+     
     }
     
 }

@@ -29,7 +29,7 @@ const addMusic = async (req, res) => {
     const music = new Music(req.body)
     if (music.music !== '' && music.name !== '' && music.url !== '') {
       await music.save()
-      res.render('addSucess')
+      res.render('messages/addSucess')
     } else {
       res.render('addMusic')
     }
