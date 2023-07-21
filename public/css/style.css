@@ -92,9 +92,7 @@ button{
 .add{
     position:absolute;
     top: 30vh;
-    left: 40%;
-    
-  
+    left: 40%; 
 }
 
 .titlePageAdd{
@@ -115,7 +113,7 @@ button{
 
 .botaoSalvar{
     position: relative;
-    left: 4%;
+    left: 3%;
     width: 130%;
     padding: 10px;
     border-radius: 10px;
@@ -123,6 +121,10 @@ button{
     color: white;
     font-weight: bold;
     font-size: 18px;
+    border: 1px solid blue;
+}
+.botaoSalvar:hover{
+    background-color: rgb(98, 98, 217);
 }
 
 .message{
@@ -136,7 +138,7 @@ button{
     width: 150px;
     position: relative;
     top:20vh;
-    left: 5vw;
+    left: 6vw;
 }
 
 .messageError{
@@ -152,6 +154,22 @@ button{
     right: 8vw;
 }
 
+.home{
+    right: 25vw;
+    width: 130%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(79, 79, 247);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid blue;
+}
+
+.home:hover{
+    background-color: rgb(98, 98, 217);
+}
+
 
 @media (max-width: 575.98px){
     .card{
@@ -161,7 +179,7 @@ button{
     }
 
     .card-Principal{
-        margin-left: -8vw;
+        margin-left: -9vw;
     }
 
     .add{
@@ -169,7 +187,6 @@ button{
         top: 30vh;
         left: 15vw;
         
-      
     }
     
     .titlePageAdd{
@@ -200,6 +217,29 @@ button{
         top:35vh;
         right: 7vw;
      
+    }
+
+    .input{
+        padding: 7px;
+        border-radius: 10px;
+        width: 100px;
+        
+    }
+
+    .home{
+        right: 70vw;
+        width: 130%;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: rgb(79, 79, 247);
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border: 1px solid blue;
+    }
+    
+    .form{
+        left: 25vw;
     }
     
 }
