@@ -154,8 +154,8 @@ button{
     right: 8vw;
 }
 
-.home{
-    right: 25vw;
+.botaoHome{
+    right: 32vw;
     width: 130%;
     padding: 5px;
     border-radius: 10px;
@@ -166,8 +166,12 @@ button{
     border: 1px solid blue;
 }
 
-.home:hover{
+.botaoHome:hover{
     background-color: rgb(98, 98, 217);
+}
+
+.botaoAcessar{
+    right: 30vw;
 }
 
 
@@ -220,15 +224,17 @@ button{
     }
 
     .input{
+        position: relative;
         padding: 7px;
         border-radius: 10px;
-        width: 100px;
+        width: 105px;
+        
         
     }
 
-    .home{
-        right: 70vw;
-        width: 130%;
+    .botaoHome{
+        right: 97vw;
+        width: 111%;
         padding: 5px;
         border-radius: 10px;
         background-color: rgb(79, 79, 247);
@@ -237,9 +243,14 @@ button{
         font-size: 18px;
         border: 1px solid blue;
     }
+
+    .botaoAcessar{
+        right: 94vw;
+    }
+    
     
     .form{
-        left: 25vw;
+        left: 50vw;
     }
     
 }

@@ -10,4 +10,8 @@ route.post('/addMusic', express.urlencoded({ extended: true }), musicController.
 
 route.get('/searchMusic', musicController.searchMusic)
 
+route.get('/admin', (req, res) => res.render('admin'))
+
+route.post('/admin', express.urlencoded({ extended: true }), musicController.admin)
+
 module.exports = route
