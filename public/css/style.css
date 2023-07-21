@@ -18,10 +18,6 @@ body{
     border-radius: 10px;
   
 }
-.card:hover{
-    width: 301px;
-    
-}
 
 .font-P{
    position: relative;
