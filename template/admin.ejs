@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-</head>
-<body>
-    <form action="/admin" method="post">
-        <input name="username" type="text" placeholder="Username">
-        <input name="password" type="password" placeholder="Password">
-        <button>Acessar</button>
-    </form>
-</body>
-</html>
+<%- include('./module/header.ejs') %>
+
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col">
+            <h2 class="text-white">Acesso</h2>
+            <form action="/admin" method="post">
+                <input name="username" type="text" placeholder="Username" class="form-control mb-1">
+                <input name="password" type="password" placeholder="Password" class="form-control mb-1">
+                <button class="btn btn-primary form-control">Acessar</button>
+            </form>
+        </div>
+    </div>
+</div>
