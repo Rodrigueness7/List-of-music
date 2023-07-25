@@ -1,19 +1,13 @@
 <%- include('./module/header.ejs')%>
-  <div class="container">
-    <h2 class="text-white title ">Adicionar Música</h2>
-    <div class="d-flex flex-column">
-      <div>
-      <form action="/addMusic" method="POST">
-        <input class="inputAdd" name="name" placeholder="Música">
-        <input class="inputAdd" name="artist" placeholder="Artista">
-        <input class="inputAdd" name="url" placeholder="URL">
-        <input class="inputAdd" name="link" placeholder="Link">
-        <button class="btn btn-primary botaoAdd">Salvar</button>
-    </div>
+<div class="container-fluid">
+  <div class="col d-flex flex-column justify-content-center" style="height: 80vh;">
+    <h2 class="text-white">Adicionar Música</h2>
+    <form action="/addMusic" method="POST">
+      <input class="form-control mb-1" name="name" placeholder="Música">
+      <input class="form-control mb-1" name="artist" placeholder="Artista">
+      <input class="form-control mb-1" name="url" placeholder="URL">
+      <input class="form-control mb-1" name="link" placeholder="Link">
+      <button class="btn btn-primary form-control">Salvar</button>
     </form>
   </div>
-  </div>
-
-  </body>
-
-  </html>
+</div>
