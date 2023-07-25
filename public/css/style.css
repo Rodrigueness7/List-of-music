@@ -17,15 +17,50 @@ body{
 }
 body{
     overflow-x: hidden;
-    zoom: 1;
 }
 
 .lupa{
+    position: relative;
+    left: 1px;
     width: 18px;
 }
-
-button{
+.botaoLupa{
     position: relative;
-    right: 37px;
-
+    right: 38px;
+   
 }
+
+.botao{
+    position: relative;
+    left: 10px
+}
+
+
+@media (max-width: 764px){
+    .botaoLupa{
+        position: relative;
+        left: 155px;
+        bottom: 30px;
+    }
+    .inputAdd{
+        display: block;
+        width: 65%;
+        margin-bottom:5px ;
+        position: relative;
+        top: 100px;
+        left:65px
+    }
+    .botaoAdd{
+        position: relative;
+        top: 100px;
+        left: 65px;
+        width: 65%;
+    }
+    .title{
+        position: relative;
+        top: 50px;
+        left: 55px
+    }
+}
+
+    
