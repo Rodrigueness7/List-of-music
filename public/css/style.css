@@ -3,7 +3,13 @@
     padding: 0px;
     background-color: black;
 }
-
+.height{
+    height: 500px;
+    width: 100%;
+}
+.messageImage{
+    width: 150px;
+}
 
 .image{
     width:300px;
