@@ -1,3 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+
 .image{
     width:300px;
     border-radius: 10px;
