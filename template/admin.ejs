@@ -1,11 +1,11 @@
 <%- include('./module/header.ejs') %>
 
 <div class="container-fluid">
-    <div class="row justify-content-center mt-5">
-        <div class="col">
+    <div class="d-flex flex-column justify-content-center height w-auto">
+        <div class="d-flex flex-column align-items-center  ">
             <h2 class="text-white">Acesso</h2>
-            <form action="/admin" method="post">
-                <input name="username" type="text" placeholder="Username" class="form-control mb-1">
+            <form class="formAcesso" action="/admin" method="post">
+                <input  name="username" type="text" placeholder="Username" class="form-control mb-1">
                 <input name="password" type="password" placeholder="Password" class="form-control mb-1">
                 <button class="btn btn-primary form-control">Acessar</button>
             </form>
