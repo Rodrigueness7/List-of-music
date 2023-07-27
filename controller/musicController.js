@@ -47,7 +47,7 @@ const admin = (req, res) => {
     if (username !== config.username && password !== config.password) {
       res.render('admin')
     } else {
-      res.render('addMusic')
+      res.render('gerenciarConta')
     }
   } catch (error) {
     res.send(error)

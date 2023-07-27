@@ -6,6 +6,11 @@
     height: 500px;
     width: 100%;
 }
+
+.width{
+    height: 50%;
+
+}
 .messageImage{
     width: 150px;
 }
@@ -43,4 +48,6 @@ body{
     width: 300px;
    
 }
-
+.width{
+    width: 50%
+}
