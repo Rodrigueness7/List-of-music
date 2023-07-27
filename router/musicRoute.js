@@ -14,4 +14,8 @@ route.get('/admin', (req, res) => res.render('admin'))
 
 route.post('/admin', express.urlencoded({ extended: true }), musicController.admin)
 
+route.get('/deleteMusic', musicController.allDelete)
+
+route.delete('/:id', musicController.deleteMusic)
+
 module.exports = route

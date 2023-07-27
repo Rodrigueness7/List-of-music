@@ -54,4 +54,23 @@ const admin = (req, res) => {
   }
 }
 
-module.exports = { searchMusic, addMusic, allMusic, admin }
+const deleteMusic = async (req, res) => {
+  const id = req.params.id
+
+  try {
+    res.send(await Music.findByIdAndDelete(id))
+  } catch (error) {
+    res.send(error)
+  }
+}
+
+const allDelete = async (req, res) => {
+  try {
+    const all = await Music.find({})
+    res.render('deleteMusic', { all })
+  } catch (error) {
+    res.send(error)
+  }
+}
+
+module.exports = { searchMusic, addMusic, allMusic, admin, deleteMusic, allDelete }

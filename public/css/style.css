@@ -25,6 +25,10 @@ body{
     bottom: 50px;
     width: 50px;
 }
+.botaoDelete{
+    position:relative;
+    left: 170px;
+}
 .position{
     position: relative;
     left: 5vw;
