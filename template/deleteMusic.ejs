@@ -1,31 +1,30 @@
 <%- include('./module/header.ejs') %>
 
-<div class="container-fluid mt-3">
-    <h2 class="ml-lg-5 text-white">Todas as músicas</h2>
-    <div class="d-flex flex-row justify-content-center flex-wrap">
-        <% for(let i of all) {%>
-            <div id="<%=i._id%>" class="mr-3 mb-3">
-                <img class="image" src="<%=i.url%>">
-                <h5 class="text-white">Musica: <%=i.name%>
-                </h5>
-                <div class="text-white">Artista: <%=i.artist%>
+    <div class="container-fluid mt-3">
+        <h2 class="ml-lg-5 text-white">Todas as músicas</h2>
+        <div class="d-flex flex-row justify-content-center flex-wrap">
+            <% for(let i of all) {%>
+                <div id="<%=i._id%>" class="mr-3 mb-3">
+                    <img class="image" src="<%=i.url%>">
+                    <h5 class="text-white">Musica: <%=i.name%>
+                    </h5>
+                    <div class="text-white">Artista: <%=i.artist%>
+                    </div>
+                    <a href="<%=i.link%>" target="_blank"><img class="botaoPlay" src="/css/image/botao-play.png"></a>
+                    <button class="btn btn-primary botaoDelete" onclick="removeMusic('<%=i._id%>')">Deletar</button>
                 </div>
-                <a href="<%=i.link%>" target="_blank"><img class="botaoPlay" src="/css/image/botao-play.png"></a>
-                <button class="btn btn-primary botaoDelete" onclick="removeMusic('<%=i._id%>')">Deletar</button>
-            </div>
-            <%}%>
+                <%}%>
+        </div>
     </div>
-</div>
 
-<script>
-      
-      function removeMusic(id){
-       
-            fetch('/' + id, {method: 'DELETE'}).then(res => {
+    <script>
+
+        function removeMusic(id) {
+
+            fetch('/' + id, { method: 'DELETE' }).then(res => {
                 res.text().then(musicId => {
-                    console.log(musicId)
                     document.getElementById(musicId).remove();
                 })
             })
-      }
-</script>
+        }
+    </script>
