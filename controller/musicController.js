@@ -44,7 +44,7 @@ const admin = (req, res) => {
   const password = req.body.password
 
   try {
-    if (username !== config.username && password !== config.password) {
+    if (username !== config.username || password !== config.password) {
       res.render('admin')
     } else {
       res.render('gerenciarConta')

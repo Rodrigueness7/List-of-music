@@ -8,7 +8,10 @@
 }
 
 .width{
-    height: 50%;
+    height: 250px;
+    width: 50%;
+    position: relative;
+    left: 25%;
 
 }
 .messageImage{
@@ -48,6 +51,11 @@ body{
     width: 300px;
    
 }
-.width{
-    width: 50%
+.background{
+    background-color: rgb(24, 194, 224);
+    border-radius: 10px;
+}
+.botaoGerenciar{
+    width: 100px;
+  
 }
