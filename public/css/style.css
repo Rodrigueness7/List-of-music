@@ -7,11 +7,10 @@
     width: 100%;
 }
 
-.width{
-    height: 250px;
-    width: 50%;
-    position: relative;
-    left: 25%;
+.widthBorder{
+   width: 305px;
+   height: 350px;
+   position: relative;
 
 }
 .messageImage{
@@ -28,10 +27,11 @@ body{
 }
 
 .botaoPlay{
-    position: relative;
-    left: 245px;
-    bottom: 50px;
     width: 50px;
+    margin: 0;
+    position: absolute;
+    right: 5px;
+    bottom: 125px
 }
 .botaoDelete{
     position:relative;
@@ -59,3 +59,8 @@ body{
     width: 100px;
   
 }
+.title{
+    width:260px;
+     margin: 0;
+    padding: 0; 
+} 
