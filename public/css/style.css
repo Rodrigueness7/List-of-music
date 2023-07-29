@@ -34,8 +34,10 @@ body{
     bottom: 125px
 }
 .botaoDelete{
-    position:relative;
-    left: 170px;
+    position:absolute;
+    top: 230px;
+    left: 220px;
+    width: 80px;
 }
 .position{
     position: relative;
@@ -64,3 +66,4 @@ body{
      margin: 0;
     padding: 0; 
 } 
+
