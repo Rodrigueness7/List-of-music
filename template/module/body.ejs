@@ -1,8 +1,12 @@
-<div class="container-fluid">
-    <h2 class="text-white">Todas as músicas</h2>
+
+<div class="container-fluid ">
+    
+    <h2 class=" container text-white mt-4 ">Todas as músicas</h2>
+    
     <div class="d-flex flex-row justify-content-center flex-wrap">
+        
         <% for(let i of docs) {%>
-            <div class=" d-flex flex-column  widthBorder">
+            <div class=" d-flex flex-column mr-3  widthBorder">
                 <img class="image" src="<%=i.url%>">
                 <h5 class="text-white title">Musica: <%=i.name%>
                 </h5>
