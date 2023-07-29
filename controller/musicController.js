@@ -1,5 +1,4 @@
 const Music = require('../model/music')
-const config = require('../constant/config')
 
 const searchMusic = async (req, res) => {
   const artist = req.query.artist
@@ -39,21 +38,6 @@ const addMusic = async (req, res) => {
   }
 }
 
-const login = (req, res) => {
-  const username = req.body.username
-  const password = req.body.password
-
-  try {
-    if (username !== config.username || password !== config.password) {
-      res.render('login')
-    } else {
-      res.render('gerenciarConta')
-    }
-  } catch (error) {
-    res.send(error)
-  }
-}
-
 const deleteMusic = async (req, res) => {
   const id = req.params.id
 
@@ -73,4 +57,4 @@ const allDelete = async (req, res) => {
   }
 }
 
-module.exports = { searchMusic, addMusic, allMusic, login, deleteMusic, allDelete }
+module.exports = { searchMusic, addMusic, allMusic, deleteMusic, allDelete }
