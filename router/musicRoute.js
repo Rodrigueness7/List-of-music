@@ -10,9 +10,9 @@ route.post('/addMusic', express.urlencoded({ extended: true }), musicController.
 
 route.get('/searchMusic', musicController.searchMusic)
 
-route.get('/admin', (req, res) => res.render('admin'))
+route.get('/login', (req, res) => res.render('login'))
 
-route.post('/admin', express.urlencoded({ extended: true }), musicController.admin)
+route.post('/login', express.urlencoded({ extended: true }), musicController.login)
 
 route.get('/deleteMusic', musicController.allDelete)
 
