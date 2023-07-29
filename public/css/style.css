@@ -9,7 +9,7 @@
 
 .widthBorder{
    width: 305px;
-   height: 350px;
+   height: 300px;
    position: relative;
 
 }
@@ -31,11 +31,11 @@ body{
     margin: 0;
     position: absolute;
     right: 5px;
-    bottom: 125px
+    bottom: 72px;
 }
 .botaoDelete{
     position:absolute;
-    top: 230px;
+    top: 235px;
     left: 220px;
     width: 80px;
 }
@@ -67,3 +67,8 @@ body{
     padding: 0; 
 } 
 
+@media(min-width: 770px ) {
+ .tunel{
+    color:blue;
+ }
+}
