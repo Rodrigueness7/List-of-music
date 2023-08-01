@@ -22,10 +22,18 @@
         function removeMusic(id) {
 
             fetch('/' + id, { method: 'DELETE' }).then(res => {
+
+                if (res.status == 200) {
                 res.text().then(musicId => {
                     document.getElementById(musicId).remove();
                 })
+            } else {
+                res.json().then(err => {
+                    console.log(err.message)
+                    alert('Houve um error')
+                })
+            }
             })
-            window.location.reload(true)
+
         }
     </script>

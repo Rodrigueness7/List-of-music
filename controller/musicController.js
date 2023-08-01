@@ -40,11 +40,14 @@ const addMusic = async (req, res) => {
 
 const deleteMusic = async (req, res) => {
   const id = req.params.id
-
+  if (!id) {
+    id = req.body.id
+  }
   try {
-    res.send(await Music.findByIdAndDelete(id))
+    await Music.findByIdAndDelete(id)
+    res.send(id)
   } catch (error) {
-    res.send(error)
+    res.status(404).send(error)
   }
 }
 

@@ -27,4 +27,6 @@ route.get('/deleteMusic', musicController.allDelete)
 
 route.delete('/:id', musicController.deleteMusic)
 
+route.delete('/', express.json(), musicController.deleteMusic)
+
 module.exports = route
