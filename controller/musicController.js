@@ -60,4 +60,31 @@ const allDelete = async (req, res) => {
   }
 }
 
-module.exports = { searchMusic, addMusic, allMusic, deleteMusic, allDelete }
+
+const loadMusic = async (req, res) => {
+  const id = req.params.id
+  
+  try {
+   let doc = await Music.findById(id)
+    res.render('editMusic', { body: doc })
+  } catch (error) {
+    res.status(404).send(error)
+  }
+}
+
+const editMusic = async (req, res) => {
+  let music = {};
+  music.name = req.body.name
+  music.artist = req.body.artist
+  music.url = req.body.url
+  music.link = req.body.link
+
+  try{
+   await Music.findByIdAndUpdate(req.params.id, music)
+    res.render('messages/addSucess')
+  } catch (error){
+    res.send(error)
+  }
+}
+
+module.exports = { searchMusic, addMusic, allMusic, deleteMusic, allDelete, editMusic, loadMusic }

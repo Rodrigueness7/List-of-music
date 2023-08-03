@@ -1,0 +1,15 @@
+<%- include('./module/header.ejs')%>
+  <div class="container-fluid">
+    <div class="d-flex flex-column justify-content-center height">
+      <div class="d-flex flex-column align-items-center">
+        <h2 class="text-white">Editar Música</h2>
+        <form class="formAcesso" action="/edit/<%=body.id%>" method="POST">
+          <input class="form-control mb-1" name="name" placeholder="Música">
+          <input class="form-control mb-1" name="artist" placeholder="Artista">
+          <input class="form-control mb-1" name="url" placeholder="URL da imagem">
+          <input class="form-control mb-1" name="link" placeholder="Link do video">
+          <button class="btn btn-primary form-control">Salvar</button>
+        </form>
+      </div>
+    </div>
+  </div>
