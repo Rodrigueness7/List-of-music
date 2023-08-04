@@ -67,8 +67,8 @@ body{
     padding: 0; 
 } 
 
-@media(min-width: 770px ) {
- .tunel{
-    color:blue;
- }
+.botaoEdit{
+ position: absolute;  
+ top: 235px;
+ width: 80px; 
 }
