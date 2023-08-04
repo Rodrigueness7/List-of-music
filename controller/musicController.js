@@ -41,7 +41,7 @@ const addMusic = async (req, res) => {
 const deleteMusic = async (req, res) => {
   const id = req.params.id
   if (!id) {
-    id = req.body.id
+    const id = req.body.id
   }
   try {
     await Music.findByIdAndDelete(id)
@@ -60,12 +60,10 @@ const allDelete = async (req, res) => {
   }
 }
 
-
 const loadMusic = async (req, res) => {
   const id = req.params.id
-  
   try {
-   let doc = await Music.findById(id)
+    let doc = await Music.findById(id)
     res.render('editMusic', { body: doc })
   } catch (error) {
     res.status(404).send(error)
@@ -73,16 +71,16 @@ const loadMusic = async (req, res) => {
 }
 
 const editMusic = async (req, res) => {
-  let music = {};
+  const music = {}
   music.name = req.body.name
   music.artist = req.body.artist
   music.url = req.body.url
   music.link = req.body.link
 
-  try{
-   await Music.findByIdAndUpdate(req.params.id, music)
+  try {
+    await Music.findByIdAndUpdate(req.params.id, music)
     res.render('messages/addSucess')
-  } catch (error){
+  } catch (error) {
     res.send(error)
   }
 }

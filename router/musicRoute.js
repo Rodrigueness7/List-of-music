@@ -29,8 +29,8 @@ route.delete('/:id', musicController.deleteMusic)
 
 route.delete('/', express.json(), musicController.deleteMusic)
 
-route.get('/edit/:id', musicController.loadMusic)
+route.get('/editMusic/:id', musicController.loadMusic)
 
-route.post('/edit/:id', express.urlencoded({extended: true}), musicController.editMusic)
+route.post('/editMusic/:id', express.urlencoded({ extended: true }), musicController.editMusic)
 
 module.exports = route
