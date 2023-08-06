@@ -63,12 +63,13 @@ body{
 }
 .title{
     width:260px;
-     margin: 0;
+    margin: 0;
     padding: 0; 
 } 
 
 .botaoEdit{
  position: absolute;  
- top: 235px;
+ top: 280px;
+ left: 220px;
  width: 80px; 
 }

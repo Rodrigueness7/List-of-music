@@ -4,7 +4,7 @@
         <h2 class="container d-flex justify-content-center text-white mt-4">Todas as músicas</h2>
         <div class="d-flex flex-row justify-content-center flex-wrap">
             <% for(let i of all) {%>
-                <div id="<%=i._id%>" class="d-flex flex-column mr-3 ml-4 mt-2 widthBorder">
+                <div id="<%=i._id%>" class="d-flex flex-column mr-3 ml-4 mt-2 mb-4 widthBorder">
                     <img class="image" src="<%=i.url%>">
                     <h5 class="text-white title">Musica: <%=i.name%>
                     </h5>
