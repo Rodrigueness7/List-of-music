@@ -4,10 +4,10 @@
       <div class="d-flex flex-column align-items-center">
         <h2 class="text-white">Editar Música</h2>
         <form class="formAcesso" action="/editMusic/<%=body.id%>" method="POST">
-          <input class="form-control mb-1" name="name" placeholder="Música" value="<%=body.name%>">
-          <input class="form-control mb-1" name="artist" placeholder="Artista" value="<%=body.artist%>">
-          <input class="form-control mb-1" name="url" placeholder="URL da imagem" value="<%=body.url%>">
-          <input class="form-control mb-1" name="link" placeholder="Link do video" value="<%=body.link%>">
+          <input class="form-control mb-1" name="name" placeholder="Música" required  value="<%=body.name%>">
+          <input class="form-control mb-1" name="artist" placeholder="Artista" required value="<%=body.artist%>">
+          <input class="form-control mb-1" name="url" placeholder="URL da imagem" required value="<%=body.url%>">
+          <input class="form-control mb-1" name="link" placeholder="Link do video" required value="<%=body.link%>">
           <button class="btn btn-primary form-control">Salvar</button>
         </form>
       </div>
