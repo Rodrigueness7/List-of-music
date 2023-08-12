@@ -14,7 +14,6 @@ route.post('/addMusic', express.urlencoded({ extended: true }), musicController.
 route.get('/searchMusic', musicController.searchMusic)
 
 route.get('/login', (req, res) => {
-  console.log(req.cookies.key) // See in console.log a data cookie.
   if (req.cookies.key !== undefined) {
     return res.render('gerenciarConta')
   }

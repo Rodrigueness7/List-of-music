@@ -6,10 +6,10 @@ const searchMusic = async (req, res) => {
   try {
     const docs = await Music.find({ artist: new RegExp(artist, 'i') }).limit(5)
     if (docs.length !== 0) {
-      return res.render('searchMusic', { docs })
+      return res.render('searchMusic', { docs, artist })
     }
 
-    res.render('messages/error')
+    res.render('messages/error', { artist })
   } catch (error) {
     res.send(error)
   }
@@ -39,9 +39,9 @@ const addMusic = async (req, res) => {
 }
 
 const deleteMusic = async (req, res) => {
-  const id = req.params.id
+  let id = req.params.id
   if (!id) {
-    const id = req.body.id
+    id = req.body.id
   }
   try {
     await Music.findByIdAndDelete(id)
@@ -63,7 +63,7 @@ const allDelete = async (req, res) => {
 const loadMusic = async (req, res) => {
   const id = req.params.id
   try {
-    let doc = await Music.findById(id)
+    const doc = await Music.findById(id)
     res.render('editMusic', { body: doc })
   } catch (error) {
     res.status(404).send(error)
