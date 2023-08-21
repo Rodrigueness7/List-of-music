@@ -4,7 +4,7 @@ const searchMusic = async (req, res) => {
   const artist = req.query.artist
 
   try {
-    const docs = await Music.find({ artist: new RegExp(artist, 'i') }).limit(5)
+    const docs = await Music.find({ artist: new RegExp(artist, 'i') })
     if (docs.length !== 0) {
       return res.render('searchMusic', { docs, artist })
     }
@@ -17,7 +17,7 @@ const searchMusic = async (req, res) => {
 
 const allMusic = async (req, res) => {
   try {
-    const docs = await Music.find({})
+    const docs = await Music.find({}).limit(10).sort({ _id: -1 })
     res.render('allMusic', { docs })
   } catch (error) {
     res.send(error)
